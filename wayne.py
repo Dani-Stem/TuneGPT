@@ -40,11 +40,13 @@ class MainWin(QWidget):
         #     user_input = self.search_bar.text()
 
 
-        def cust_button_clicked(self, final_bar):
-            return final_bar
-            # cust_msg = QMessageBox()
-            # cust_msg.setText(final_bar)
-            # l = cust_msg.exec_()
+        def cust_button_clicked(final_bar):
+            cust_msg = QMessageBox()
+            final_bar0 = str(final_bar).replace('(', ' ')
+            final_bar1 = final_bar0.replace(',)', ' ')
+            cust_msg.setText(final_bar1)
+            l = cust_msg.exec_()
+            # return print(final_bar)
 
         self.setWindowTitle("Weezy F Baby")
         self.setFixedSize(QSize(400, 500))
@@ -117,14 +119,14 @@ class MainWin(QWidget):
         b = (random.choice(verbs))
         c = (random.choice(nouns))
 
-        self.final_bar = "weezy f baby and the f is for", f_word, a + " ", b + " ", c + " ", syn_word + " ", "like ", rhyme_word
-        print(self.final_bar)
+        final_bar = "weezy f baby and the f is for", f_word, a + " ", b + " ", c + " ", syn_word + " ", "like ", rhyme_word
+        print(final_bar)
 
         cust_button = QPushButton(self)
         cust_button.setText("Custom Lyric")
         cust_button.resize(120, 50)
         cust_button.move(138, 145)
-        cust_button.clicked.connect(lambda: cust_button_clicked(self.final_bar))
+        cust_button.clicked.connect(cust_button_clicked(final_bar))
 
         # self.search_bar = QLineEdit(self)
         # self.search_bar.setPlaceholderText("search...")
