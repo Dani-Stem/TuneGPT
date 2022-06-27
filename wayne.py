@@ -6,7 +6,6 @@ import requests
 from bs4 import BeautifulSoup
 import random
 
-
 con = sqlite3.connect('f_is_for.db')
 cur = con.cursor()
 
@@ -35,18 +34,13 @@ class MainWin(QWidget):
                 l = msg.exec_()
             return lambda: print(x)
 
-        # def search_button_clicked(self):
-        #     print(checked)
-        #     user_input = self.search_bar.text()
-
-
-        def cust_button_clicked(final_bar):
+        def cust_button_clicked(f_bar):
             cust_msg = QMessageBox()
             final_bar0 = str(final_bar).replace('(', ' ')
             final_bar1 = final_bar0.replace(',)', ' ')
             cust_msg.setText(final_bar1)
             l = cust_msg.exec_()
-            # return print(final_bar)
+            return lambda: print(final_bar1)
 
         self.setWindowTitle("Weezy F Baby")
         self.setFixedSize(QSize(400, 500))
@@ -62,7 +56,6 @@ class MainWin(QWidget):
         sub_label1.move(116,55)
         sub_label2.move(110,75)
         sub_label3.move(118,95)
-
 
         URL = ('https://randomword.com/words/f.html')
         page = requests.get(URL)
@@ -122,21 +115,13 @@ class MainWin(QWidget):
         final_bar = "weezy f baby and the f is for", f_word, a + " ", b + " ", c + " ", syn_word + " ", "like ", rhyme_word
         print(final_bar)
 
+        f_bar = final_bar
+
         cust_button = QPushButton(self)
         cust_button.setText("Custom Lyric")
         cust_button.resize(120, 50)
         cust_button.move(138, 145)
-        cust_button.clicked.connect(cust_button_clicked(final_bar))
-
-        # self.search_bar = QLineEdit(self)
-        # self.search_bar.setPlaceholderText("search...")
-        # self.search_bar.move(45, 105)
-        # self.search_bar.resize(130, 25)
-        # self.search_button = QPushButton(self)
-        # self.search_button.clicked.connect(lambda checked: search_button_clicked)
-        # self.search_button.setText('>>')
-        # self.search_button.move(180, 105)
-        # self.search_button.resize(30, 25)
+        cust_button.clicked.connect(cust_button_clicked(f_bar))
 
         i = 0
 
