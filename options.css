@@ -1,0 +1,76 @@
+.oswald {
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+  }
+
+.shadows-into light-regular {
+    font-family: "Shadows Into Light", cursive;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+
+html{
+    background-image: linear-gradient(#100000, #000000);
+    background-repeat: no-repeat;
+    font-family: "Oswald", sans-serif;
+    height: 100%;
+}
+.box_main{
+    display: inline-flex;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+
+.buttons{
+    width: 100%;
+    display: inline;
+}
+
+.buttons a {
+	position: relative;
+	display: inline-block;
+	background-color: rgb(170, 0, 0); /*for compatibility with older browsers*/
+	background-image: linear-gradient(rgb(161, 0, 0),rgb(182, 0, 0));
+    font-size: 1.5vw;
+	/* text styles */
+	text-decoration: none;
+	color: #fff;
+	font-family: sans-serif;
+	font-weight: 100;
+    padding: 10%;
+    border-radius: 26px;
+    box-shadow: 0px 1px 4px -2px #333;
+    text-shadow: 0px -1px #333;
+  }
+
+.buttons a:after{
+	content: '';
+	position: absolute;
+	top: 2px;
+	left: 2px;
+	width: calc(100% - 4px);
+	height: 50%;
+    border-radius: 13px;
+	background: linear-gradient(rgba(251, 131, 131, 0.8), rgba(255, 92, 92, 0.2));
+}
+
+.button1{
+    width: 30%;
+    padding-bottom: 1%;
+    padding-left: 40%;
+    padding-top: 22%;
+}
+.button2{
+    width: 30%;
+    padding-left: 40%;
+}
+
+img{
+    float: right;
+    opacity: 55%;
+}
+
