@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <link rel="stylesheet" href="rap.css">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+    <title>TuneGPT</title>
+  </head>
+<body>
+<center><h1 class="maintitle">Generate Rap</h1></center>
+
+<center><h3 class="subtitle">Type a word into the box below to create a lil wayne inspired rap.</h3></center>
+
+<div class="mainbox">
+<p>Enter a word that begins w the letter F: </p>
+<input type="text" id="mycooldata" name="mycooldata"><br>
+<br/>
+<button id="mycoolbutton" onclick="myFunction()">Generate Rap</button>
+
+<p id="gr">
+    
+</p>
+</div>
+<script>
+function myFunction() {
+  // This is where we make the request to our flask app
+  fetch("http://localhost:5000/test", {
+    method: "post",
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json'
+    },
+    // This is the data the flask app function at /test receives
+    body: JSON.stringify({
+      // We assign "very_cool_data" to the data from the input form that we want
+      very_cool_data: document.getElementById("mycooldata").value
+    })
+  })
+  .then(function(response) { return response.json(); })
+    .then(function(json) {
+        document.getElementById("gr").innerHTML = json.data
+  });
+    // Log the response
+}
+</script>
+
+<img src="wayne.png">
+
+
+</body>
+</html>
