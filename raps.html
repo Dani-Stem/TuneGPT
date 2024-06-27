@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Shadows+Into+Light&display=swap" rel="stylesheet">
     <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
-    <link rel="stylesheet" href="rap.css">
+    <link rel="stylesheet" href="raps.css">
     <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'"> -->
     <title>TuneGPT</title>
   </head>
@@ -21,24 +21,117 @@
     </div>
 <center><h1 class="maintitle">Rap index</h1></center>
 
-<center><h3 class="subtitle">Click a word below to see the rap lyric and song.</h3></center>
 <div class="mainbox">
 
     <div class="boxleft">
-        
+        <button id = "btn" onclick = "changeImage()"> FRONT DOOR </button>
+        <br>
+        <button id = "btn" onclick = "changeImage1()"> FUCK YOURSELF</button>
+        <br>
+        <button id = "btn" onclick = "changeImage2()"> FILL IN THE BLANK </button>
+        <br>
+        <button id = "btn" onclick = "changeImage3()"> FORNICATE </button>
+        <br>
+        <button id = "btn" onclick = "changeImage4()"> FLAME </button>
+        <br>
+        <button id = "btn" onclick = "changeImage5()"> FORGET IT </button>
+        <br>
+        <button id = "btn" onclick = "changeImage6()"> F BOMBER </button>
+        <br>
+        <button id = "btn" onclick = "changeImage7()"> FLESH </button>
+        <br>
+        <button id = "btn" onclick = "changeImage8()"> FOREVER </button>
+        <br>
+        <button id = "btn" onclick = "changeImage9()"> FINISH LINE </button>
+        <br>
+        <button id = "btn" onclick = "changeImage10()"> FRANCHISE </button>
+        <br>
+        <button id = "btn" onclick = "changeImage11()"> FLOW </button>
+        <br>
+        <button id = "btn" onclick = "changeImage12()"> PHENOMENAL </button>
+        <br>
+        <button id = "btn" onclick = "changeImage13()"> FEMA </button>
+        <br>
 
     </div>
 
     <div class="boxright">
+        <p id = "upper">Click a word below to see the rap lyric and song.
+        <br>The lyric of the word you choose will show up here</p>
 
+        <center><img src="wayne.png" id = "image"></center>
+        <br>
+        <center><p id="p1"> </p></center>
+        <p id = "result"> </p>
     </div>
 
 </div>
 
 
 
-<img src="wayne.png">
+<!-- <img src="wayne.png"> -->
 
+
+<script>
+    var result = document.getElementById("result");
+    var upper = document.getElementById("upper");
+    function changeImage() {
+       var image = document.getElementById("image");
+       document.getElementById("p1").innerHTML = "Weezy F. Baby and the F is for Front Door Cause that's where I brang it Soo-woo if you bangin', motherfucker!";
+       }
+    function changeImage1() {
+       var image = document.getElementById("image");
+       document.getElementById("p1").innerHTML = "Uh, all or nothing or nothing else I bleed reality, I should cut myself Just had a bowl of riches, and a cup of wealth And the F is for Fuck yourself";
+       }
+    function changeImage2() {
+       var image = document.getElementById("image");
+       document.getElementById("p1").innerHTML = "Destructive-ass nigga, watch me break the bank Weezy F and the F is for Fill in the blank";
+       }
+    function changeImage3() {
+       var image = document.getElementById("image");
+       document.getElementById("p1").innerHTML = "Weezy fuck the world yep, I fuck it 'til it ovulate Get her to the crib, get in that pussy and just dominate Weezy F. Baby, and the F is for Fornicate Polo Ralph Lauren, bitch, that's what my pajamas say Big tall glass of some shit you can't pronounciate";
+       }
+    function changeImage4() {
+       var image = document.getElementById("image");
+       document.getElementById("p1").innerHTML = "I'm Weezy F., and the F is for Flame Eat these rappers, chef up the game Shit on the track, shit on the train Murder the beat—the beat was slain";
+       }
+    function changeImage5() {
+       var image = document.getElementById("image");
+       document.getElementById("p1").innerHTML = "I'm on, like the lights, I light up The kush, knock out, Tyson fights, I'm talkin bout Ass and titties, Sex and the City Weezy F Baby and the F is for Forget it I'm lovin my shine, sippin on fine wine Up in some fine dime, then she give me Einstein";
+       }
+    function changeImage6() {
+       var image = document.getElementById("image");
+       document.getElementById("p1").innerHTML = "Say it with your chest, mama, say less, mama Weezy F and the F is for F bomber Yes, mama I'ma eat you like Jeff Dahmer Say she on her period, let's make a mess, mama";
+       }
+    function changeImage7() {
+       var image = document.getElementById("image");
+       document.getElementById("p1").innerHTML = "Use protection when you fuck around Possession of deception imperfection no affection No correct your transgression turn depression to aggression Got an obsession for expression With no pressure no discretion and the F is for the Flesh of all the fleshless ones I left em F em.";
+       }
+    function changeImage8() {
+       var image = document.getElementById("image");
+       document.getElementById("p1").innerHTML = "I'm breaking your level, boy, I'm taking your medal, boy Weezy F. Baby and the F is for forever, boy!";
+       }
+    function changeImage9() {
+       var image = document.getElementById("image");
+       document.getElementById("p1").innerHTML = "Eagle street where them twenty’s go for 25 Bitch I’m a boss I got ya ho in my assembly line Here’s Weezy F and the 'F' is for finish line";
+       }
+    function changeImage10() {
+       var image = document.getElementById("image");
+       document.getElementById("p1").innerHTML = "Weezy F and the 'F' is for franchise You looking at me is like you're looking through ant eyes Hahaha! Young Money can't die";
+       }
+    function changeImage11() {
+       var image = document.getElementById("image");
+       document.getElementById("p1").innerHTML = "You know what's under the seat, I got the Combat 4 Gave a nigga one, bet he don't come back no more Nope - it's Weezy F and the 'F' is for flow I spit blood on a track, call me Dracula dough";
+       }
+    function changeImage12() {
+       var image = document.getElementById("image");
+       document.getElementById("p1").innerHTML = "Yes, I do it big, call me Little Astronomical Weezy F. Baby, and the F is for phenomenal type of nigga go and get his hood 'cross his abdominal";
+       }
+    function changeImage13() {
+       var image = document.getElementById("image");
+       document.getElementById("p1").innerHTML = "I gotta bring the hood back after Katrina Weezy F Baby, now the F is for FEMA";
+       }
+ </script>
 
 </body>
 </html>
